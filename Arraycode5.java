@@ -1,15 +1,20 @@
-package Training;
-
-import java.util.Arrays;
+package Strings.pkg;
+import java.util.Scanner;
 public class Arraycode5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-int arr[]= {90,10,20,60,40};
-Arrays.sort(arr);
-for(int i=0;i<arr.length;i++)
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the sentence");
+String str=sc.next();
+int count=1;
+for(int i=0;i<str.length()-1;i++)
 {
-	System.out.print(arr[i]+",");
+	if((str.charAt(i)==' ')&& (str.charAt(i+1)!=' '))
+	{
+		count++;
+	}
+	System.out.println("number of words in an string="+count);
 }
 	}
 
